@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.AddMemberActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/filled" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="155dp"
+            android:layout_marginRight="0dp"
+            android:fontFamily="@font/raleway_bold"
+            android:text="Add new member"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filled_2"
+            android:clickable="true" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/member_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Member Details"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/member_details"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner_bg">
+
+                    <TextView
+                        android:id="@+id/Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Name*"
+                        android:textSize="10dp" />
+
+                    <EditText
+                        android:id="@+id/editName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Name"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/raleway_regular"
+                        android:hint="Add Name"
+                        android:maxLength="30"
+                        android:paddingRight="150dp"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative_name"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner_bg">
+
+                    <TextView
+                        android:id="@+id/NameJob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Job title*"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/editJob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/NameJob"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/raleway_regular"
+                        android:hint="add jobs"
+                        android:maxLength="20"
+                        android:paddingRight="150dp"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative_title"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner_bg">
+
+                    <EditText
+                        android:id="@+id/editphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/transparent"
+                        android:hint="Phone number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="10dp"
+                        android:paddingRight="150dp"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative_phone"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/corner_bg">
+
+                    <EditText
+                        android:id="@+id/editemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/raleway_regular"
+                        android:hint="Email*"
+                        android:padding="10dp"
+                        android:paddingRight="150dp"
+                        android:textColor="@color/Black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="0dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Groups"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/projectManager"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="@string/project_manager"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/publicRelations"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/projectManager"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="@string/public_relations"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/Administrator"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/publicRelations"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="@string/administrators"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/Accounts"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Administrator"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="@string/accounts"
+                        android:textAllCaps="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/humanResource"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="@string/human_resources"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/Developers"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/humanResource"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="@string/developers"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/Designer"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Developers"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="@string/designers"
+                        android:textAllCaps="false" />
+
+                    <Button
+                        android:id="@+id/marketing"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Designer"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_button"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="@string/marketing"
+                        android:textAllCaps="false" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/permission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="@string/permissions"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rdgroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/permission"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:fontFamily="@font/raleway_regular"
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:padding="5dp"
+                        android:text="@string/view_only" />
+
+                    <RadioButton
+                        android:fontFamily="@font/raleway_regular"
+                        android:id="@+id/radio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:padding="5dp"
+                        android:text="@string/can_comment" />
+
+                    <RadioButton
+                        android:fontFamily="@font/raleway_regular"
+                        android:id="@+id/radio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:onClick="onRadioButtonClicked"
+                        android:padding="5dp"
+                        android:text="Can edit" />
+                </RadioGroup>
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rdgroup"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginBottom="20dp"
+                    android:switchPadding="180dp"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="@string/notify_other_members" />
+            </RelativeLayout>
+
+            <Button
+                android:fontFamily="@font/raleway_regular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Black"
+                android:text="Create Member"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

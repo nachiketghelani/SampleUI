@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ScreenUI</string>
+    <string name="project_managers">Project Managers</string>
+    <string name="count_members">24 Members</string>
+    <string name="notify_other_members">Notify other members</string>
+    <string name="project_manager">Project Manager</string>
+    <string name="human_resources">Human Resources</string>
+    <string name="public_relations">Public Relations</string>
+    <string name="developers">Developers</string>
+    <string name="administrators">Administrators</string>
+    <string name="designers">Designers</string>
+    <string name="accounts">Accounts</string>
+    <string name="marketing">Marketing</string>
+    <string name="can_comment">Can Comment</string>
+    <string name="view_only">View only</string>
+    <string name="permissions">Permissions</string>
+</resources>
